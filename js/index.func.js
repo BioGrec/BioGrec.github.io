@@ -39,9 +39,8 @@ document.getElementById('loginForm').onsubmit = async (event) => {
 
     try {
         const response = await fetch(event.target.action, {
-            mode: 'cors',
-  credentials: 'include',
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
