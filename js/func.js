@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(response => response.json())
+     .then(response => {
+     console.log("Response status:", response.status); 
+     return response.text();  
+ })
     .then(data => {
+         console.log("data /me", data);
       if (data) {
         loggedInUser = data;
         const userType = data.type;
