@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'index.html'; 
         return;
     }
-    fetch('https://7415-181-236-170-98.ngrok-free.app/auth/me', {
+    fetch('https://b3a8-181-236-170-98.ngrok-free.app/auth/me', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
