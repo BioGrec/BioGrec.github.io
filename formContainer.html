@@ -1,0 +1,30 @@
+<form id="new-container-form" action="https://7415-181-236-170-98.ngrok-free.app/api/containers" method="POST" enctype="multipart/form-data">
+    <label for="nombre">Nombre del Contenedor:</label>
+    <input type="text" id="nombre" name="nombre" required><br>
+  
+    <label for="type">Tipo:</label>
+    <select id="type" name="type" required>
+      <option value="venta">Venta</option>
+      <option value="alquiler">Alquiler</option>
+    </select><br>
+  
+    <label for="size">Tamaño:</label>
+    <input type="text" id="size" name="size" required><br>
+  
+    <label for="price">Precio:</label>
+    <input type="number" id="price" name="price" required><br>
+  
+    <label for="availability">Disponibilidad:</label>
+    <input type="checkbox" id="availability" name="availability"><br>
+  
+    <label for="location">Ubicación:</label>
+    <input type="text" id="location" name="location" required><br>
+  
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description"></textarea><br>
+  
+    <label for="image-link">Enlace de la imagen:</label>
+    <input type="url" id="image-link" name="image"><br>
+  
+    <button type="submit">Crear Contenedor</button>
+  </form>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/style.main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+</head>
+<body>
+
+    <div id="mySidepanel" class="sidepanel">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+         <img src="img/logo.png" alt="Logo de la empresa" class="navbar-logo">
+        <a href="#" onclick="closeNav()" class="nav-link" id="mi-perfil-link">Mi Perfil</a>
+        <br>
+        <a href="#" onclick="closeNav()" class="nav-link" id="solicitar-link" >Solicitar</a>
+        <br>
+        <a href="#" onclick="closeNav()" class="nav-link" id="listar-link">Listar Solicitudes</a>
+        <br>
+        <a href="#" onclick="closeNav()" class="nav-link" id="asistencia-link">Asistencia</a>
+
+        <a href="#"onclick="closeNav()" class="nav-link admin-link" id="solicitudes-link">Solicitudes</a>
+        
+        <a href="#"onclick="closeNav()" class="nav-link admin-link" id="clientes-link">Clientes</a>
+
+        <a href="#"onclick="closeNav()" class="nav-link admin-link" id="productos-link">Gestión productos</a>
+
+        <a href="#"onclick="closeNav()" class="nav-link admin-link" id="contenedores-link">Contenedores</a>
+
+        <a href="#"onclick="closeNav()" class="nav-link admin-link" id="premios-link">Premios</a>
+        <br>
+        <a href="#" class="nav-link" id="cerrar-sesion">Cerrar sesión</a>
+      </div>
+      <button class="openbtn" onclick="openNav()">☰ Menú</button>  
+    <main>
+
+        <div class="content" id="content-area">
+        </div>
+        <div id="rating-modal" class="modal" style="display:none;">
+            <div class="modal-cont">
+                <a class="close" onclick="closeRating()">×</a>
+                <h2>Califica esta solicitud</h2>
+                <div>
+                    <input type="text" id="search-products" placeholder="Buscar productos" oninput="filterProducts()">
+                  </div>
+                  
+                  <div id="product-list"></div>
+                  
+                  <h3>Productos seleccionados:</h3>
+                  <div id="selected-products"></div>
+                <div id="rating-container"></div>
+                <button id="finish-request-confirm-button">Terminar</button>
+            </div>
+        </div>        
+       
+    </main>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+function closeRating() {
+    document.getElementById("rating-modal").style.display= "none";
+}
+</script>
+    <script src="./js/view.func.js"></script>
+    <script src="./js/func.js"></script>
+    <script src="./js/userfunc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+
+</body>
+</html>
